@@ -1,0 +1,23 @@
+{
+  "name": "nodeServer",
+  "version": "1.0.0",
+  "description": "A node server capable of HTTP, HTTPS and WebSocket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taosheng2012/nodeServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taosheng2012/nodeServer/issues"
+  },
+  "homepage": "https://github.com/taosheng2012/nodeServer#readme",
+  "dependencies": {
+    "serve-handler": "^5.0.8"
+  }
+}
