@@ -35,12 +35,12 @@ log(line + "\n")
 
 // =============================================================================================
 var serverHttp = http.createServer(function(request, response) {
-    function send(data) {
-        response.setHeader("Content-Type", "application/json; charset=utf8")
-        response.end(JSON.stringify(data))
-    }
-
     function handleInterface() {
+        function send(data) {
+            response.setHeader("Content-Type", "application/json; charset=utf-8")
+            response.end(JSON.stringify(data))
+        }
+
         var handlerList = {
             "/api/add.do": function() {
                 send({ result: "success" })
@@ -52,10 +52,12 @@ var serverHttp = http.createServer(function(request, response) {
         if (handler) {
             handler()
         } else {
-            log("\tUnimplemented Interface")
+            var tip = "NotImplemented Interface"
+
+            log("\t" + tip)
 
             response.statusCode = 404
-            response.end("Yes. This is 404.")
+            response.end(tip)
         }
 
 
