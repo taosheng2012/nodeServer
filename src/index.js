@@ -7,10 +7,10 @@ var handleStatic = require("serve-handler")
 var log = console.log
 
 // =============================================================================================
-process.chdir("d:/Projects/webVue-develop")
+process.chdir("d:/Projects/webVue")
 
 
-process.title = process.cwd()
+process.title = /[^\\]+$/.exec(process.cwd())[0]
 
 // =============================================================================================
 var line = "=".repeat(90)
